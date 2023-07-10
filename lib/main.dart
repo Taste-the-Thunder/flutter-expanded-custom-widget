@@ -27,10 +27,16 @@ class MyApp extends StatelessWidget {
                     flex: 3,
                     child: Column(
                       children: [
-                        _customContainer(
-                            color: Colors.brown,
-                            num: 2
-                        ),
+                        Expanded(child: Row(children: [
+                          _customContainer(
+                              color: Colors.blue,
+                              num: 1
+                          ),
+                          _customContainer(
+                              color: Colors.brown,
+                              num: 2
+                          ),
+                        ],)),
                         _customContainer(
                             color: Colors.purple,
                             num: 3
