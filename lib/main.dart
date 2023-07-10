@@ -23,10 +23,21 @@ class MyApp extends StatelessWidget {
                       color: Colors.indigo,
                       num: 5
                   ),
-                  _customContainer(
-                      color: Colors.purple,
-                      num: 3
-                  ),
+                  Expanded(
+                    flex: 3,
+                    child: Column(
+                      children: [
+                        _customContainer(
+                            color: Colors.brown,
+                            num: 2
+                        ),
+                        _customContainer(
+                            color: Colors.purple,
+                            num: 3
+                        ),
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
