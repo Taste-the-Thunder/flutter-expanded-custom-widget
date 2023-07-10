@@ -11,8 +11,25 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: Column(
           children: [
-            _customContainer(8, Colors.red),
-            _customContainer(5, Colors.indigo),
+            _customContainer(
+                num: 8,
+                color: Colors.red
+            ),
+            Expanded(
+              flex: 5,
+              child: Row(
+                children: [
+                  _customContainer(
+                      color: Colors.indigo,
+                      num: 5
+                  ),
+                  _customContainer(
+                      color: Colors.purple,
+                      num: 3
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
@@ -20,7 +37,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-Widget _customContainer(int num, Color color){
+Widget _customContainer({required int num,required Color color}){
   return Expanded(
     flex: num,
     child: Container(
